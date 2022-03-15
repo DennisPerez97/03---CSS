@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(31, 62, 114);
+  }
+
+/*---------------- EMPIEZAN TODAS LAS CARACTERISTICAS DE TEXTO ----------*/
+.h1-1{ /*Afecta a todos los titulos h1*/
+    position: relative;
+    top:6.5vw;
+}
+h3{
+    
+    color: rgb(31, 62, 114);
+}
+h1{ /*Afecta a todos los titulos h1*/
+    font-size: 4.5vw;
+    font-weight: bold;
+    vertical-align: middle;
+    color: rgb(31, 62, 114);
+    
+}
+h2{ /*Afecta a todos los titulos h1*/
+    font-size: 3vw;
+    font-weight: bold;
+    vertical-align: middle;
+    color: rgb(31, 62, 114);
+}
+
+p{ /*afecta a todos los parrafos P*/
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: rgb(109, 123, 147);
+}
+.p1{ /*afecta a todos los parrafos P*/
+    position: relative; /*Esto lo puse junto con lo de abajo para poder posicionar los textos en sus lugares, si no se ponia corrido, lo mismo con h1(arriba)*/
+    top:7.5vw;/*si mueves este el texto se desplaza hacia abajo(distancia desde la parte del recuardo de arriba(el top)*/
+}
+.p2{ /*afecta a todos los parrafos P*/
+    position: relative; /*Esto lo puse junto con lo de abajo para poder posicionar los textos en sus lugares, si no se ponia corrido, lo mismo con h1(arriba)*/
+    top:24vw;/*si mueves este el texto se desplaza hacia abajo(distancia desde la parte del recuardo de arriba(el top), para observalo puedes ponerle un valor de 0*/
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    font-weight: 600;
+}
+
+.p3{ /*afecta al parrafo de descripcion debajo de "Why should I Vaccine"*/
+    position: relative; /*Esto lo puse junto con lo de abajo para poder posicionar los textos en sus lugares, si no se ponia corrido, lo mismo con h1(arriba)*/
+    /*top:2.5vw*/
+}
+
+/*----------------ACA TERMINA TODAS LAS CARACTERISTICAS DE TEXTO ----------*/
+
+
+
+.menu-scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 2.9vw 9.5vw; /* Este es el espacio hacia arriba, abajo y los lados*/
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.4s;
+  }
+  .scroll-down .menu-scroll {
+    transform: translate3d(0, -100%, 0);
+  }
+  
+  .scroll-up .menu-scroll  {
+    transform: none;
+  }
+  .menu-scroll .container-logo{
+    position: relative;
+    top: 50%;
+    left:0%;
+    text-align: left;
+    float: inline-start;
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+    /*background-color: aqua;*/
+    transform: translate(0%, 0%);
+  }
+  .menu-scroll .container-buttons{
+    position: relative;
+    top: 0%;
+    text-align: right;
+    height: 100%;
+    width: 70%;
+    overflow: hidden;
+
+    transform: translate(0%, 0%);
+  }
+  .buttontrans{ /* este son los botones de database,new,etc, son  transparentes de fondo*/
+    border: none;
+    color: rgb(109, 123, 147);
+    width: 9.0vw;
+    height: 3.6vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    font-weight: bolder;
+    -webkit-transition-duration: 0.4s; /* tiempo que hara la animacion de oscurecer */
+    transition-duration: 0.4s;
+    background-color: transparent;
+        
+  }
+  .buttontrans:hover { /*La accion de que se oscuresca de los botones transparentes*/
+    background-color: rgba(212, 212, 212, 0.5); /* Green */
+}
+.button-w-background{ /*este es el boton con fondo y redondeado*/
+    border: none;
+    color: white;
+    width: 11.7vw; 
+    height: 3.6vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4vw;
+    border-radius: 0.4vw;
+    -webkit-transition-duration: 0.4s; /* tiempo que hara la animacion de oscurecer */
+    transition-duration: 0.4s;
+    background-color: rgb(51, 83, 209);
+}
+.button-w-background:hover { /*La accion de que se oscuresca de los botones transparentes*/
+    background-color: rgb(37, 64, 169); /*  */
+    color: white;
+}
+.infocontainer { /*Contenedor que ocupa todo el ancho de pantalla para poner info y a la enfermera*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    align-items: center;
+    /*background-color: aqua;*/
+}
+
+
+
+.containerinfo1{ /*Contenedor de info*/
+    position: relative;
+    align-items: center;
+    float: left;
+    height: 65.9vw;
+    width: 51%;
+    overflow: hidden;
+    /*background-color: rgb(255, 0, 0);*/
+    padding: 9.5% 8.5%;
+}
+.containerinfo1 .icon1{
+    width: 3%;
+}
+
+.imgcontainer-enfermera{ /*Contenedor de enfermera*/
+    position: relative;
+    float:right;
+    width: 49%;
+    height: 65.9vw;
+    overflow: hidden;
+    /*background-color: rgb(111, 0, 255);*/
+    transform: translate(0%, 0%);
+}
+.imgcontainer-enfermera img{
+    width: 100%;
+    height: 100%;
+}
+
+.listvaccines { /*aca solo afecta a las listas con clase "listvaccines"*/
+    position: relative;
+    top:12vw;
+  }
+ 
+  .listvaccines li { /*aca solo afecta a las listas con clase "listvaccines"*/
+    font-size: 1.2em;
+    padding: 0.5em;
+    display: inline;
+    margin-top:100px;
+    font-weight: 500;
+    font-size: 1.2vw;
+  }
+
+.containerflotante{ /*Este es el recuadro donde esta la location, date y vaccine*/
+    position: absolute;
+    top: 57vw;
+    left: 9%;
+    width: 65vw;
+    height: 7.9vw;
+    padding: 2% 2%;
+    z-index: 2;
+    font-family: sans-serif;
+    background-color: white;
+    border:0.3vw solid rgb(245, 248, 253);
+    border-radius: 1vw;
+    max-height: 20vw;
+    font-size: 1vw;
+    overflow: auto;
+}
+
+.recuadroform {
+    position: relative;
+    align-items: center;
+    float: left;
+    height: 100%;
+    width: 25%;
+    overflow: hidden;
+    }
+    .recuadroform img{
+        width: 17%;
+        margin-right: 1vw;
+        float:left
+    }
+    .recuadroform h2{ 
+    font-size: 1.6vw;
+    color: rgb(31, 62, 114);
+    }
+    .recuadroform p{ 
+    font-size: 1vw;
+    color: rgb(109, 123, 147);
+    }
+
+.infocontainer2 { /*Contenedor que ocupa todo el ancho de pantalla para poner info y a la enfermera*/
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+       /* background-color: blueviolet;*/
+        padding: 5% 9.4% 5% 9.4%; /*arriba, derecha,abajo,izq*/
+}
+
+.container-info { 
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /*background-color: #acc454;*/
+    padding: 2% 0%;
+    }
+
+.container-vaccine { 
+    position: relative;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2% 2%;
+    float: left;
+    height: 24.5vw;
+    width: 21%;
+    overflow: hidden;
+    background-color: white;
+    border:0.3vw solid rgb(245, 248, 253);
+    border-radius: 1vw;
+    }
+    .container-vaccine img{
+        width: 4vw;
+    }
+.container-vaccine h3{ 
+    font-size: 1.5vw;
+    vertical-align: middle;
+    color: rgb(31, 62, 114);
+    }
+.container-vaccine p{ 
+    font-size: 1vw;
+    position: relative;
+    top:1vw;
+    color: rgb(109, 123, 147);
+    }
+
+    .infocontainer3 { /*Contenedor que ocupa todo el ancho de pantalla para poner info y a la enfermera*/
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        /*background-color: rgb(107, 255, 38);*/
+        padding: 5% 0% 5% 0%; /*arriba, derecha,abajo,izq*/
+}
+.infocontainer3 img{
+    width: 44.6%;
+}
+.infocontainer3 .img-girl{
+    width: 44.6%;
+    height: 45vw;
+}
+.infocontainer3 .container { 
+    position: relative;
+    align-items: center;
+    padding: 0% 10% 0% 5%;
+    float: right;
+    height: 45vw;
+    width:55.4%;
+    overflow: hidden;
+    /*background-color: rgba(255, 0, 0,0.5);*/
+    }
+.infocontainer3 .container2 { 
+    position: relative;
+    align-items: center;
+    float:left;
+    padding: 0% 8% 0% 9.5%;
+    height: 55vw;
+    width:55.4%;
+    overflow: hidden;
+    /*background-color: rgba(255, 0, 0,0.5);*/
+    }
+    .infocontainer3 .container2 .pseparador{
+    margin-bottom: 5vw;    
+    }
+    .infocontainer3 .markcontainer { 
+        position: relative;
+        padding: 10% 10% 10% 7%;
+        height: 45vw;
+        width:100%;
+        overflow: hidden;
+        /*background-color: rgb(255, 0, 140);*/
+        text-align: left;
+        }
+    
+    .infocontainer3 h3{
+        padding-top: 1vw;
+        padding-bottom: 2.5vw;
+        font-size: 1.2vw;
+
+    }
+    .markcontainer img{
+        width: 4.2vw;
+        padding-right: 2vw;
+    }
+
+    .markcontainer .container-contact { 
+        position: relative;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 2%;
+        padding: 4% 4%;
+        float: left;
+        height: 14vw;
+        width: 48%;
+        overflow: hidden;
+        background-color: white;
+        border:0.3vw solid rgb(245, 248, 253);
+        border-radius: 8%;
+        }
+        .markcontainer .container-contact img{
+            width: 35%;
+            padding-right: 0vw;
+            float:left
+        }
+        .markcontainer .container-contact h3{ 
+        font-size: 1.5vw;
+        color: rgb(31, 62, 114);
+        }
+        .markcontainer .container-contact p{ 
+        font-size: 1vw;
+        color: rgb(109, 123, 147);
+        }
+    
+    .markcontainer .container-contact button{ /*este es el boton con fondo y redondeado*/
+        border: none;
+        color: rgb(51, 83, 209);
+        width: 100%; 
+        height: 3.5vw;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.4vw;
+        font-weight: bold;
+        -webkit-transition-duration: 0.4s; /* tiempo que hara la animacion de oscurecer */
+        transition-duration: 0.4s;
+        background-color: rgb(241, 245, 255);
+        
+    }
+    .markcontainer .container-contact button:hover { /*La accion de que se oscuresca de los botones transparentes*/
+    background-color: rgb(205, 213, 243); /*  */
+    color: rgb(51, 83, 209);
+    }
+    .markcontainer .container-contact .button2{ /*este es el boton con fondo y redondeado*/
+        border: none;
+        color: white;
+        width: 100%; 
+        height: 3.5vw;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.4vw;
+        font-weight: bold;
+        -webkit-transition-duration: 0.4s; /* tiempo que hara la animacion de oscurecer */
+        transition-duration: 0.4s;
+        background-color: rgb(51, 83, 209);
+        
+    }
+    .markcontainer .container-contact .button2:hover { /*La accion de que se oscuresca de los botones transparentes*/
+        background-color: rgb(37, 64, 169); /*  */
+        color: white;
+    }
+    footer {
+        background-color: rgb(238, 243, 255);
+        padding: 5%;
+        height: 25vw;
+        text-align: center;
+        color: white;
+    }
+    
+    footer img{
+        width: 100%;
+    }
+    footer p{
+        font-size: 1.2vw;
+    }
+    footer .container-footer { 
+        position: relative;
+        padding: 2% 4%;
+        float: left;
+        height: 15vw;
+        width: 21%;
+        overflow: hidden;
+        /*background-color: rgb(255, 251, 0);*/
+    }
+    footer .container-footer-der { 
+        position: relative;
+        text-align: justify;
+        padding: 2% 4%;
+        float: right;
+        height: 15vw;
+        width: 18%;
+        overflow: hidden;
+        /*background-color: rgb(255, 251, 0);*/
+    }
+    footer .container-footer-inf { 
+        position: relative;
+        text-align: justify;
+        padding: 2% 4%;
+        margin-bottom: 1vw;
+        float: right;
+        height: 1vw;
+        width:100%;
+        overflow: hidden;
+        /*background-color: rgb(255, 251, 0);*/
+    }
+    footer .container-footer-der p{
+        margin:15% 0%;
+    }
+    footer .container-footer-der h2{
+        font-size: 2vw;
+    }
+    footer .baseizq{
+        float:left;
+    }
+    footer .baseder{
+        float:right;
+    }
+    
